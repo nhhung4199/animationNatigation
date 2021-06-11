@@ -2,7 +2,6 @@ import React from 'react';
 import {Image, TouchableOpacity, View} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 
-const SPRING_CONFIG = {mass: 2, damping: 500, stiffness: 200};
 
 const App = props => {
   const clickkk = () => {

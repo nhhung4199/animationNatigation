@@ -1,87 +1,68 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {Text, Image, StyleSheet, TouchableOpacity, View} from 'react-native';
-import {Navigation} from 'react-native-navigation';
+import React from "react";
+import { Text, Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Navigation } from "react-native-navigation";
 
-const Test1 = props => {
+const Test1 = (props) => {
   const clickkk = () => {
     Navigation.push(props.componentId, {
       component: {
-        name: 'Test2',
-        options: {
-          animations: {
-            pop: {
-              content: {
-                translationX: {
-                  from: 0,
-                  to: require('react-native').Dimensions.get('window').width,
-                  duration: 300,
-                },
-              },
-            },
-            push: {
-              content: {
-                translationX: {
-                  from: require('react-native').Dimensions.get('window').width,
-                  to: 0,
-                  duration: 300,
-                },
-              },
-            },
-          },
-        },
+        name: "ParallaxHeader",
       },
     });
   };
   return (
-    <View style={{flex: 1, alignItems: 'center'}}>
+    <View style={{ flex: 1, alignItems: "center" }}>
       <View
         style={{
-          backgroundColor: 'green',
-          width: '100%',
+          backgroundColor: "green",
+          width: "100%",
           height: 150,
-          alignItems: 'center',
+          alignItems: "center",
           shadowOpacity: 5,
-          justifyContent: 'center',
-        }}>
-        <Image
-          source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
-          }}
-          nativeID={'image1Dest'}
-          style={styles.image1}
-        />
+          justifyContent: "center",
+        }}
+      >
+        <TouchableOpacity onPress={clickkk}>
+          <Image
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+            nativeID={"image1Dest"}
+            style={styles.image1}
+          />
+        </TouchableOpacity>
       </View>
 
-      <View style={{flex: 1, justifyContent: 'space-around'}}>
+      <View style={{ flex: 1, justifyContent: "space-around" }}>
         <Image
           source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
+            uri: "https://reactnative.dev/img/tiny_logo.png",
           }}
           style={styles.image}
         />
         <Image
           source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
+            uri: "https://reactnative.dev/img/tiny_logo.png",
           }}
           style={styles.image}
         />
         <Image
           source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
+            uri: "https://reactnative.dev/img/tiny_logo.png",
           }}
           style={styles.image}
         />
         <Image
           source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
+            uri: "https://reactnative.dev/img/tiny_logo.png",
           }}
           style={styles.image}
         />
 
         <Image
           source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
+            uri: "https://reactnative.dev/img/tiny_logo.png",
           }}
           style={styles.image}
         />
@@ -101,7 +82,7 @@ const styles = StyleSheet.create({
     height: 70,
     width: 70,
     zIndex: 1,
-    transform: [{rotate: '45deg'}],
+    transform: [{ rotate: "45deg" }],
     marginLeft: 24,
     marginBottom: -24,
     // borderRadius: 20,
